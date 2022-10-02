@@ -1,4 +1,4 @@
-# CEH_Practical_Preparation
+# CEH_Practical_Preparation_Notes
 CEH Practical Preparation 2021
 
 # Exam
