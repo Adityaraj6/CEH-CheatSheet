@@ -1,0 +1,8 @@
+1. Scan all ports
+- nmap -p- 10.10.10.10 
+
+2. Scan all opened ports with more details 
+- nmap -p443,80,53,135,8080,8888 -A -O -sV -sC -T4 -oN nmapOutput 10.10.10.10
+
+3. Reference
+- https://www.stationx.net/nmap-cheat-sheet/

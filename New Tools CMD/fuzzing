@@ -1,0 +1,4 @@
+1. Fuzzing
+
+--> gobuster -e -u http://10.10.10.10 -w /usr/share/wordlists/medium.txt
+--> dirb http://10.10.10.10 /usr/share/wordlists/medium.txt

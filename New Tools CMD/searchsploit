@@ -1,0 +1,18 @@
+1. Update Searchsploit
+--> searchsploit -u
+
+2. Search vulnerabilities
+--> searchsploit linux kernal
+--> searchsploit -t windows 10 (Focus on the Exploit Title)
+
+3. Copy exploit
+--> cp /usr/share/exploitdb/exploits/multiple/remote/8648.py /root/Desktop (Sample)
+
+4. Complete sample
+--> searchsploit “Linux Kernel”
+--> searchsploit -m 7618 — Paste the exploit in the current directory
+--> searchsploit -p 7618[.c] — Show complete path
+--> searchsploit — nmap file.xml — Search vulns inside a Nmap XML result
+
+4. Reference 
+--> https://www.youtube.com/watch?v=29GlfaH5qCM&ab_channel=HackerSploit

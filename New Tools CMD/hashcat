@@ -1,0 +1,13 @@
+1. Hashcat
+--> Crack hash value to plaintext
+
+2. Crack NTLMv2
+--> hashcat -m 5600 ntlmhash.txt rockyou.txt --force
+--> hashcat.exe -m hash.txt rokyou.txt -O
+
+--force = Running utilizing CPU processing
+-O = Process more faster
+
+--> Using "--force" will facing some problems when running the command
+--> Download hashcat binaries at official website of hashcat
+--> 

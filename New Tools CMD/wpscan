@@ -1,0 +1,19 @@
+1. Brute force username/password login
+--> wpscan --url http://10.10.10.10/ -U 'admin' -P /usr/share/wordlists/medium.txt
+
+2. Normal scanning
+--> wpscan --url <URL>
+
+3. Enumerate User
+--> wpscan --url https://10.10.10.10/ --enumerate u
+
+4. Wordpress enumerate user using metasploit
+--> use auxiliary/scanner/http/wordpress_login_enum
+--> FILE_PASS
+--> RHOST (Target)
+--> RPORT 
+--> TARGETURI (URL) - [http://[IP Address of Windows Server 2016]:8080/CEH]
+--> Username
+
+5. Reference 
+--> https://www.youtube.com/watch?v=gg_yUo3hVeg&ab_channel=WPCasts

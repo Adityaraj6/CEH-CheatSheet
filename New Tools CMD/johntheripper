@@ -1,0 +1,5 @@
+1. MD5
+--> john --format=raw-md5 password.txt
+
+Reference 
+--> https://medium.com/@sc015020/how-to-crack-passwords-with-john-the-ripper-fdb98449ff1

